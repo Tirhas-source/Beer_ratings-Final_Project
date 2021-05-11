@@ -3,6 +3,7 @@ from flask import Flask, request, jsonify, render_template
 import pickle
 import json
 import joblib
+import pickle as pickle
 
 
 
@@ -28,9 +29,9 @@ def return_prediction(model,scaler,sample_json):
     return classes[X_test][0]
 
 
-
 # REMEMBER TO LOAD THE MODEL AND THE SCALER!
 app = Flask(__name__)
+# app = Flask(__name__, template_folder='./templates', static_folder='./static')
 beer_model = pickle.load(open('logmodel.pkl', 'rb'))
 beer_scaler = pickle.load(open('scaler.pkl','rb'))
 

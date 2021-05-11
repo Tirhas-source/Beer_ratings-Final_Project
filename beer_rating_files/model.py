@@ -3,6 +3,7 @@ import numpy as np
 import sklearn
 from sklearn.linear_model import LogisticRegression
 from sklearn.model_selection import train_test_split
+import pickle as pickle
 
 
 import warnings
